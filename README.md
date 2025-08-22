@@ -1,5 +1,0 @@
-1- El objetivo principal de la práctica fue instalar el compilador Haskell en Debian 13 que es mi distribución de linux, asì como realizar mi propio README y responder unas preguntas relacionadas con la práctica en un archivo .txt
-2- La versión de ghc instalada es: The Glorious Glasgow Haskell Compilation System, version 9.6.6
-3- El tiempo requerido en realizar la práctica fue de 1 hora.
-4- Sólo tuve un problema y fue al ejecutar el script de instalación de GHCup, el sistema arrojó el error 'bash: curl: command not found', lo cuál se resolvió instalando 'curl' con 'sudo apt install curl'
-Además, la práctica me fue útil porque pude empezar a familiarizarme con (en este caso, la creación de mi README) y al finalizar la práctica con mi push de mi trabajo para subirlo al repositorio 

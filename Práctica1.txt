@@ -1,8 +1,0 @@
-1-¿Cuáles son las principales diferencias entre Java y Haskell?
-Haskell es un lenguaje funcional, mientras que java es un programa orientado a objetos. En haskell todo se basa en funciones y no hay cambios de estado, mientras que en java se usan clases y objetos que pueden cambiar. Haskell tiene una sintaxis más corta y usa evaluación perezosa, mientras que java es más directo y calcula todo al momento.
-2-¿Por qué Haskell no ha alcanzado una adopción significativa en la industria del software?
-Porque es difícil de aprender, tiene conceptos raros como las monads y la evaluación perezosa que no se ven en otros lenguajes. También hay menos herramientas y librerías listas para usar. La mayoría de empresas prefieren lenguajes más conocidos como Java, Python o JavaScript que son más fáciles de enseñar a los equipos.
-3-Analogía entre Git y GitHub
-Yo siento que Git es como tu cuaderno de trabajo donde escribes y guardas versiones de tu código y GitHub es el proceso de como subir ese trabajo  a internet para compartirla con otros, colaborar y que te puedan dar ideas o correciones.
-FUENTES:
-Haskell vs Java | What are the differences? (2022, 27 julio). StackShare. https://stackshare.io/stackups/haskell-vs-java
