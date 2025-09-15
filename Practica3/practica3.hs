@@ -31,7 +31,7 @@ ghci > [2 , 3 , 5 , 7 , 11 , 13 , 17 , 19]
 -}
 
 primos :: [Int] -> [Int]
-primos list = [x | x <- list, x `mod` 2 == 0]
+primos xs = [x | x <- xs, x > 1, length [d | d <- [2..x-1], x `mod` d == 0] == 0]
 
 {-Implementa la función conjuntoLista, que recibe una lista de cualquier tipo y de-
 vuelve una lista sin elementos repetidos a partir de la lista original.
