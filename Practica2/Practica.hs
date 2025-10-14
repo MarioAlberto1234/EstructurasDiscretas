@@ -1,4 +1,4 @@
-{- Funcion: sayHello
+	{- Funcion: sayHello
 Descripción: Devuelve un Hello seguido de la cadena de texto ingresado 
 Uso: sayHello "Haskell" = Hello, Haskell!
  -}
@@ -83,6 +83,7 @@ Uso: cuadrados (1, 2, 3, 4, 5) = (1, 4, 9, 16, 25)
  
 cuadrados :: (Int, Int, Int, Int, Int) -> [Int]
 cuadrados (a, b, c, d, e) = [a^2, b^2, c^2, d^2, e^2]
+
 
 
  
