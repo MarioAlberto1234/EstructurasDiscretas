@@ -1,7 +1,9 @@
 **Nombre del Proyecto** 🤓​
+
 Codificación de Huffman (Variante)
 
 **Objetivo** ✅​
+
 El objetivo del proyecto fue entender esta variante de la codificación de huffman para así poder implementar o busar cómo crear las funciones que nos codifiquen, decodifiquen, compriman, nos den las frecuencias y creen nuestro arbol de huffman en base a una cadena de texto que nosotros pasemos, en ese caso del proyecto nuestras frases favoritas.
 
 **Funcionamiento del proyecto** ⚙️​
@@ -19,12 +21,16 @@ Decodificación 👨‍💻​
 
 **Ejecución** ​👀​
 Si quieres llevar a cabo la ejecución o ver cómo se ve este proyecto por tu propia cuenta haz lo siguiente:
+
  1- Clona mi repositorio que ahí viene la sección de proyecto y ponlo con este comando en tu terminal:
  *git clone https://github.com/MarioAlberto1234/EstructurasDiscretas/tree/main/Proyecto*
+ 
  2- compila el proyecto escribiendo ghci en tu terminal seguido de el nombre del archivo Proyecto.hs
  *ghci Proyecto.hs*
+ 
  3. Usa o escribe el nombre de la función que quieras observar y ingresa una frase o un texto como tú lo desees. Por ejemplo se vería algo así:
  *ghci > frecuencias "la frase o texto que quieras*
+ 
  4. Pulsa enter y ve el resultado
 
 **Ejemplo de cada algoritmo** 🔍​
@@ -32,9 +38,11 @@ Si quieres llevar a cabo la ejecución o ver cómo se ve este proyecto por tu pr
  
 
 **Tiempo Requerido** ​⏰​
+
 El tiempo requerido del proyecto fue de varios días, exactamente no lo sé porque lo hacía cada que podía, pero si hacía una hora cada vez que abría el proyecto.
 
 **Comentarios extra** ​📝​
+
 Este proyecto no fue complicado pero si muy tedioso en el hecho de realizar el archivo latex, investigar para responder preguntas y la resolución de las actividades de implementación, pero más allá de eso, fue muy útil el proyecto para entender latex, esta variante de codificación de huffman y la investigación por cuenta propia, me quedo satifecho con mi proyecto.
 
 
