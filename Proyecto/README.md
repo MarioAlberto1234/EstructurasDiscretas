@@ -34,6 +34,8 @@ Si quieres llevar a cabo la ejecución o ver cómo se ve este proyecto por tu pr
  4. Pulsa enter y ve el resultado
 
 **Ejemplo de cada algoritmo** 🔍​
+
+
 ![Ejemplo de los algoritmos creados por mi](algoritmos.png)
  
 
