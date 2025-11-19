@@ -1,63 +1,85 @@
-\usepackage{titlesec}
+\documentclass{article} 
+\usepackage[utf8]{inputenc}  
 \usepackage{graphicx}
+\graphicspath{{/home/magikzgnz/Imágenes/}}
+\usepackage{fancyhdr}        
+\usepackage{url}            
+\usepackage{float}          
+
+\pagestyle{fancy}
 \rhead{González Cisneros Mario Alberto}
 \lhead{Codificación de Huffman}
 
-
-\title{Reporte del Proyecto: Codicicación de Huffman}
+\title{Reporte del Proyecto: Codificación de Huffman}
 \author{González Cisneros Mario Alberto\\ Número de cuenta: 323121583 \\ Facultad de Ciencias, UNAM}
 \date{\today}
 
 \begin{document}
 
 
+\begin{center}
+    \includegraphics[width=\textwidth,height=0.9\textheight]{unam.png} 
+\end{center}
+
+\maketitle
+
 \section{Introducción}
 Este proyecto tiene como objetivo principalmente, conocer la codificación y decodificación de Huffman, así como explorar los fundamentos de lo que es la compresión de datos, sus aplicaciones en distintos tipos de archivos, y la implementación de algoritmos como Huffman.
 
 \section{Desarrollo}
 El desarrollo del proyecto se llevó a cabo con estrategias de un avance progresivo, es decir, realizar paso a paso o día por día una cosa nueva e ir revisando y corrigiendo errores o mejorando de lo mismo.
+
 \subsection{Entradas y salidas estándar}
 
 \subsection{Actividades de documentación}
-\textbf{\textit{1-¿Cuál es la diferencia entre la compresión con perdida y compresión sin perdida?}}
-Unas de las principales diferencias entre la compresión con pérdida y sin pérdida es que con pérdida esta elimina permanentemente los datos de un archivo y en el caso de sin pérdida, este restaura y reconstruye los datos comprimdos. También al momento de saber cuándo utilizarlos ya que la compresnión con pérdida se da cuando la pérdida de informacion de archivos es aceptable y por la otra parte es cuando la pérdida de la información de archivos es inaceptable. Por último, otra gran diferencia es es sus aplicaciones ya que una trabaja o puede trabajar con imágenes, video y audio, y la otra con textos, imágenes y audio.
-\textbf{\textit{2-¿Cómo se lleva a cabo la compresión de texto, imágenes, video y audio?}}
-La compresión de texto, imágenes, videos y audio se realiza mediante algoritmos que reducen la cantidad de datos necesarios para representar la información, manteniendo la calidad lo más posible. Por ejemplo, en el caso de los\textbf{textos}, puede ser con técnicas comúnes como el de este proyecto que es Huffman, LZW, entre otras, para \textbf{imágenes} están las compresiones con pérdida y sin pérdida, para los \textbf{videos} son con algoritmos populares como H.264, H.265, VP9 entre otros, y en el caso de \textbf{audios} igualmente con comprensión con pérdida o sin pérdida.
-\textbf{\textit{3-¿A que se refiere el enfoque para la compresión de datos, códigos de longitud variable?}}
-Se refiere a asignar a cada símbolo una cantidad distinta de bits según su frecuencia de aparición, es decir los símbolos más comunes reciben códigos más cortos y los menos frecuentes los más largos. Esto permite reducir el tamaño total de la representación sin pérdida de información
-\textbf{\textit{4- Archivos de texto donde está una de mis frases favoritas, una con espacios y la otra sin espacio para saber su contenido en binario mediante el comando xxd y sus pesos en bytes}}
-\begin{figure}[h]
+\textbf{\textit{1-¿Cuál es la diferencia entre la compresión con pérdida y compresión sin pérdida?}}  
+Unas de las principales diferencias entre la compresión con pérdida y sin pérdida es que con pérdida esta elimina permanentemente los datos de un archivo y en el caso de sin pérdida, este restaura y reconstruye los datos comprimidos. También al momento de saber cuándo utilizarlos ya que la compresión con pérdida se da cuando la pérdida de información de archivos es aceptable y por la otra parte es cuando la pérdida de la información de archivos es inaceptable. Por último, otra gran diferencia es en sus aplicaciones ya que una trabaja o puede trabajar con imágenes, video y audio, y la otra con textos, imágenes y audio.
+
+\textbf{\textit{2-¿Cómo se lleva a cabo la compresión de texto, imágenes, video y audio?}}  
+La compresión de texto, imágenes, videos y audio se realiza mediante algoritmos que reducen la cantidad de datos necesarios para representar la información, manteniendo la calidad lo más posible. Por ejemplo, en el caso de los \textbf{textos}, puede ser con técnicas comunes como el de este proyecto que es Huffman, LZW, entre otras. Para \textbf{imágenes} están las compresiones con pérdida y sin pérdida, para los \textbf{videos} son con algoritmos populares como H.264, H.265, VP9 entre otros, y en el caso de \textbf{audios} igualmente con compresión con pérdida o sin pérdida.
+
+\textbf{\textit{3-¿A qué se refiere el enfoque para la compresión de datos, códigos de longitud variable?}}  
+Se refiere a asignar a cada símbolo una cantidad distinta de bits según su frecuencia de aparición, es decir los símbolos más comunes reciben códigos más cortos y los menos frecuentes los más largos. Esto permite reducir el tamaño total de la representación sin pérdida de información.
+
+\textbf{\textit{4- Archivos de texto donde está una de mis frases favoritas, una con espacios y la otra sin espacio para saber su contenido en binario mediante el comando xxd y sus pesos en bytes}}  
+\begin{figure}[H]
     \centering
-    \includegraphics{Imágenes/CapturasDePantalla/archivos.png}
+    \includegraphics[width=0.5\textwidth]{archivos.png}
     \caption{Contenidos binarios de mi frase favorita con espacios y sin espacios así como sus pesos en bytes}
 \end{figure}
-\textbf{\textit{4-¿Cuál es la diferencia respecto a contenido binario de los dos archivos?}}
+
+\textbf{\textit{4-¿Cuál es la diferencia respecto a contenido binario de los dos archivos?}}  
 La única diferencia respecto al contenido binario de los respectivos archivos es la presencia de bytes de espacio, por lo que hace que el archivo sea más grande y que su representación binaria tenga más bits.
-\textbf{\textit{5- Comprime la frase del anterior inciso y otra frase más (puede ser una frase de una de tus canciones favoritas), usando los algoritmos vistos. Para el primer algoritmo adjunta su representación binaria de inicio y final despúes de utilizarlo.}}
-\begin{figure}[h]
+
+\textbf{\textit{5- Comprime la frase del anterior inciso y otra frase más (puede ser una frase de una de tus canciones favoritas), usando los algoritmos vistos. Para el primer algoritmo adjunta su representación binaria de inicio y final después de utilizarlo.}}  
+\begin{figure}[H]
     \centering
-    \includegraphics{Imágenes/'Compresion P1.png'}
+    \includegraphics[width=0.5\textwidth]{arbol1.png}
     \caption{Compresión primera frase}
 \end{figure}
-\begin{figure}[h]
+
+\begin{figure}[H]
     \centering
-    \includegraphics{Imágenes/'Compresion P2.png'}
+    \includegraphics[width=0.5\textwidth]{arbol2.png}
     \caption{Compresión segunda frase}
 \end{figure}
-\textbf{\textit{6- El algoritmo que se muestra en este proyecto es una variante del algoritmo estandar de Huffman • Investiga como es este el algoritmo estandar • Menciona la ventajas y desventajas que tienen nuestra variante del algoritmo de Huffman con el estandar. • Elige una de tus frases para aplicar el algoritmo estandar (solo codificación).}}
-1- Este algoritmo estándar construye un arbol binario en base a las frecuencias de cada carácter que contenga nuestra cadena o texto, siendo la frecuencia más alta o importante el carácter que más veces se repite y lás que menos se repiten tiene menos importancia. Alguna de las \textbf{ventajas} de esta variante es que es quizá menos compleja y que su implementación sea más sencilla, las \textbf{desventajas} podrìan ser que no siempre logra la compresión mínima.
-\underline{La codificación se puede observar en las imagenes de el inciso 5}
-\textbf{\textit{7- ¿Por qué es necesario tener un respectivo árbol de Huffman para decodificar una cadena de texto? ¿Qué pasa si no lo tengo?}}
-El árbol de Huffman es indispensable para decodificar porque contiene la asignación exacta de códigos binarios a cada símbolo, así que sin él, la cadena comprimida se vuelveimposible de reconstruir correctamente ya que no sabriamos dónde termina un símbolo y empieza otro.
-\textbf{\textit{8- ¿De qué manera las estrategias de optimización empleadas en el videojuego Grand Theft Auto V para consolas de septima generación (PS3/Xbox 360) reflejan los principios fundamentales de la compresión de datos en comparación con las de octava generación?}}
-En PS3 y Xbox 360 el Grand Theft Auto V usó optimizaciones que reflejan algunos de los principios de compresión de datos al reducir resolución, texturas y distancia de dibujado para que el juego cupiera en la limitada memoria y ancho de banda y en el caso de las consolas de nueva generación, estas aplicaron estrategias menos restrictivas como con mayor fidelidad gráfica y densidad de datos, porque el hardware permitía manejar más información sin tanta compresión perceptual.
+
+\textbf{\textit{6- El algoritmo que se muestra en este proyecto es una variante del algoritmo estándar de Huffman • Investiga cómo es este el algoritmo estándar • Menciona las ventajas y desventajas que tiene nuestra variante del algoritmo de Huffman con el estándar • Elige una de tus frases para aplicar el algoritmo estándar (solo codificación).}}  
+Este algoritmo estándar construye un árbol binario en base a las frecuencias de cada carácter que contenga nuestra cadena o texto, siendo la frecuencia más alta o importante el carácter que más veces se repite y las que menos se repiten tienen menos importancia. Alguna de las \textbf{ventajas} de esta variante es que es quizá menos compleja y que su implementación sea más sencilla, las \textbf{desventajas} podrían ser que no siempre logra la compresión mínima.  
+\underline{La codificación se puede observar en las imágenes del inciso 5.}
+
+\textbf{\textit{7- ¿Por qué es necesario tener un respectivo árbol de Huffman para decodificar una cadena de texto? ¿Qué pasa si no lo tengo?}}  
+El árbol de Huffman es indispensable para decodificar porque contiene la asignación exacta de códigos binarios a cada símbolo, así que sin él, la cadena comprimida se vuelve imposible de reconstruir correctamente ya que no sabríamos dónde termina un símbolo y empieza otro.
+
+\textbf{\textit{8- ¿De qué manera las estrategias de optimización empleadas en el videojuego Grand Theft Auto V para consolas de séptima generación (PS3/Xbox 360) reflejan los principios fundamentales de la compresión de datos en comparación con las de octava generación?}}  
+En PS3 y Xbox 360 el Grand Theft Auto V usó optimizaciones que reflejan algunos de los principios de compresión de datos al reducir resolución, texturas y distancia de dibujado para que el juego cupiera en la limitada memoria y ancho de banda. En el caso de las consolas de nueva generación, estas aplicaron estrategias menos restrictivas con mayor fidelidad gráfica y densidad de datos, porque el hardware permitía manejar más información sin tanta compresión perceptual.
 
 \section{Conclusiones}
 
 \section{Referencias}
 \begin{itemize}
-https://www.adobe.com/uk/creativecloud/photography/discover/lossy-vs-lossless.html
-https://www.profesionalreview.com/2023/08/12/compresion-descompresion/
+    \item \url{https://www.adobe.com/uk/creativecloud/photography/discover/lossy-vs-lossless.html}
+    \item \url{https://www.profesionalreview.com/2023/08/12/compresion-descompresion/}
 \end{itemize}
 
 \end{document}
